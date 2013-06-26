@@ -29,9 +29,9 @@
 		return select;
 	};
 	[_subject performSelect:validationBlock];
-	STAssertEquals(_total,(NSInteger)12,@"2*(1+2+3) = %d",_total);
+	XCTAssertEquals(_total,(NSInteger)12,@"2*(1+2+3) = %d",_total);
 	NSDictionary *target = @{ @"1" : @(1), @"2" : @(2) };
-	STAssertEqualObjects(_subject,target,@"selected dictionary is %@",_subject);
+	XCTAssertEqualObjects(_subject,target,@"selected dictionary is %@",_subject);
 }
 
 - (void)testSelectedNone {
@@ -41,8 +41,8 @@
 		return select;
 	};
 	[_subject performSelect:validationBlock];
-	STAssertEquals(_total,(NSInteger)12,@"2*(1+2+3) = %d",_total);
-	STAssertEquals(_subject.count,(NSUInteger)0,@"no item is selected");
+	XCTAssertEquals(_total,(NSInteger)12,@"2*(1+2+3) = %d",_total);
+	XCTAssertEquals(_subject.count,(NSUInteger)0,@"no item is selected");
 }
 
 - (void)testReject {
@@ -52,9 +52,9 @@
 		return reject;
 	};
 	[_subject performReject:validationBlock];
-	STAssertEquals(_total,(NSInteger)12,@"2*(1+2+3) = %d",_total);
+	XCTAssertEquals(_total,(NSInteger)12,@"2*(1+2+3) = %d",_total);
 	NSDictionary *target = @{ @"1" : @(1), @"2" : @(2) };
-	STAssertEqualObjects(_subject,target,@"dictionary after reject is %@",_subject);
+	XCTAssertEqualObjects(_subject,target,@"dictionary after reject is %@",_subject);
 }
 
 - (void)testRejectedAll {
@@ -64,8 +64,8 @@
 		return reject;
 	};
 	[_subject performReject:validationBlock];
-	STAssertEquals(_total,(NSInteger)12,@"2*(1+2+3) = %d",_total);
-	STAssertEquals(_subject.count,(NSUInteger)0,@"all items are rejected");
+	XCTAssertEquals(_total,(NSInteger)12,@"2*(1+2+3) = %d",_total);
+	XCTAssertEquals(_subject.count,(NSUInteger)0,@"all items are rejected");
 }
 
 - (void)testMap {
@@ -74,13 +74,13 @@
 		return @(_total);
 	};
 	[_subject performMap:transformBlock];
-	STAssertEquals(_total,(NSInteger)12,@"2*(1+2+3) = %d",_total);
+	XCTAssertEquals(_total,(NSInteger)12,@"2*(1+2+3) = %d",_total);
 	NSDictionary *target = @{
 		@"1" : @(2),
 		@"2" : @(6),
 		@"3" : @(12)
 	};
-	STAssertEqualObjects(_subject,target,@"transformed dictionary is %@",_subject);
+	XCTAssertEqualObjects(_subject,target,@"transformed dictionary is %@",_subject);
 }
 
 @end

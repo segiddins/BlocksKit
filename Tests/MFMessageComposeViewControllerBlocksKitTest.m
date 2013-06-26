@@ -32,8 +32,8 @@
 		blockWorked = YES;
 	};
 	[[_subject dynamicDelegateForProtocol:@protocol(MFMessageComposeViewControllerDelegate)] messageComposeViewController:_subject didFinishWithResult:MessageComposeResultSent];
-	STAssertTrue(delegateWorked, @"Delegate method not called.");
-	STAssertTrue(blockWorked, @"Block handler not called.");
+	XCTAssertTrue(delegateWorked, @"Delegate method not called.");
+	XCTAssertTrue(blockWorked, @"Block handler not called.");
 }
 
 @end

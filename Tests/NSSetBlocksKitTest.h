@@ -3,10 +3,10 @@
 //  BlocksKit Unit Tests
 //
 
-#import <SenTestingKit/SenTestingKit.h>
+#import <XCTest/XCTest.h>
 #import <BlocksKit/NSSet+BlocksKit.h>
 
-@interface NSSetBlocksKitTest : SenTestCase
+@interface NSSetBlocksKitTest : XCTestCase
 
 - (void)testEach;
 - (void)testMatch;

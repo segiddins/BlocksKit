@@ -32,7 +32,7 @@
 	};
 
 	[_subject each:keyValueBlock];
-	STAssertEquals(_total, (NSInteger)12, @"2*(1+2+3) = %d", _total);
+	XCTAssertEquals(_total, (NSInteger)12, @"2*(1+2+3) = %d", _total);
 }
 
 - (void)testMatch {
@@ -42,8 +42,8 @@
 		return select;
 	};
 	NSDictionary *selected = [_subject match:validationBlock];
-	STAssertEquals(_total, (NSInteger)2, @"2*1 = %d", _total);
-	STAssertEqualObjects(selected, @(1), @"selected value is %@", selected);
+	XCTAssertEquals(_total, (NSInteger)2, @"2*1 = %d", _total);
+	XCTAssertEqualObjects(selected, @(1), @"selected value is %@", selected);
 }
 
 - (void)testSelect {
@@ -53,9 +53,9 @@
 		return select;
 	};
 	NSDictionary *selected = [_subject select: validationBlock];
-	STAssertEquals(_total, (NSInteger)12, @"2*(1+2+3) = %d", _total);
+	XCTAssertEquals(_total, (NSInteger)12, @"2*(1+2+3) = %d", _total);
 	NSDictionary *target = @{ @"1" : @(1), @"2" : @(2) };
-	STAssertEqualObjects(selected, target, @"selected dictionary is %@", selected);
+	XCTAssertEqualObjects(selected, target, @"selected dictionary is %@", selected);
 }
 
 - (void)testSelectedNone {
@@ -65,8 +65,8 @@
 		return select;
 	};
 	NSDictionary *selected = [_subject select: validationBlock];
-	STAssertEquals(_total, (NSInteger)12, @"2*(1+2+3) = %d", _total);
-	STAssertTrue(selected.count == 0, @"none item is selected");
+	XCTAssertEquals(_total, (NSInteger)12, @"2*(1+2+3) = %d", _total);
+	XCTAssertTrue(selected.count == 0, @"none item is selected");
 }
 
 - (void)testReject {
@@ -76,9 +76,9 @@
 		return reject;
 	};
 	NSDictionary *rejected = [_subject reject: validationBlock];
-	STAssertEquals(_total, (NSInteger)12, @"2*(1+2+3) = %d", _total);
+	XCTAssertEquals(_total, (NSInteger)12, @"2*(1+2+3) = %d", _total);
 	NSDictionary *target = @{ @"3" : @(3) };
-	STAssertEqualObjects(rejected, target, @"dictionary after rejection is %@", rejected);
+	XCTAssertEqualObjects(rejected, target, @"dictionary after rejection is %@", rejected);
 }
 
 - (void)testRejectedAll {
@@ -88,8 +88,8 @@
 		return reject;
 	};
 	NSDictionary *rejected = [_subject reject: validationBlock];
-	STAssertEquals(_total, (NSInteger)12, @"2*(1+2+3) = %d", _total);
-	STAssertTrue(rejected.count == 0, @"all items are selected");
+	XCTAssertEquals(_total, (NSInteger)12, @"2*(1+2+3) = %d", _total);
+	XCTAssertTrue(rejected.count == 0, @"all items are selected");
 }
 
 - (void)testMap {
@@ -98,9 +98,9 @@
 		return @(_total);
 	};
 	NSDictionary *transformed = [_subject map: transformBlock];
-	STAssertEquals(_total, (NSInteger)12, @"2*(1+2+3) = %d", _total);
+	XCTAssertEquals(_total, (NSInteger)12, @"2*(1+2+3) = %d", _total);
 	NSDictionary *target = @{ @"1" : @(2), @"2" : @(6), @"3" : @(12) };
-	STAssertEqualObjects(transformed,target,@"transformed dictionary is %@",transformed);
+	XCTAssertEqualObjects(transformed,target,@"transformed dictionary is %@",transformed);
 }
 
 - (void)testAny {
@@ -110,8 +110,8 @@
 		return select;
 	};
 	BOOL isSelected = [_subject any: validationBlock];
-	STAssertEquals(_total, (NSInteger)2, @"2*1 = %d", _total);
-	STAssertEquals(isSelected, YES, @"found selected value is %i", isSelected);
+	XCTAssertEquals(_total, (NSInteger)2, @"2*1 = %d", _total);
+	XCTAssertEquals(isSelected, YES, @"found selected value is %i", isSelected);
 }
 
 - (void)testAll {
@@ -121,8 +121,8 @@
 		return select;
 	};
 	BOOL allSelected = [_subject all: validationBlock];
-	STAssertEquals(_total, (NSInteger)12, @"2*(1+2+3) = %d", _total);
-	STAssertTrue(allSelected, @"all values matched test");
+	XCTAssertEquals(_total, (NSInteger)12, @"2*(1+2+3) = %d", _total);
+	XCTAssertTrue(allSelected, @"all values matched test");
 }
 
 - (void)testNone {
@@ -132,8 +132,8 @@
 		return select;
 	};
 	BOOL noneSelected = [_subject all: validationBlock];
-	STAssertEquals(_total, (NSInteger)6, @"2*(1+2) = %d", _total);
-	STAssertFalse(noneSelected, @"not all values matched test");
+	XCTAssertEquals(_total, (NSInteger)6, @"2*(1+2) = %d", _total);
+	XCTAssertFalse(noneSelected, @"not all values matched test");
 }
 
 @end

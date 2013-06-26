@@ -3,7 +3,7 @@
 //  BlocksKit Unit Tests
 //
 
-#import <SenTestingKit/SenTestingKit.h>
+#import <XCTest/XCTest.h>
 #import <BlocksKit/A2DynamicDelegate.h>
 
 #pragma mark -
@@ -301,7 +301,7 @@ typedef struct _MyStruct {
 
 #pragma mark -
 
-@interface A2DynamicDelegateTests : SenTestCase
+@interface A2DynamicDelegateTests : XCTestCase
 
 - (void)testReturnObject;
 - (void)testReturnStruct;

@@ -3,10 +3,10 @@
 //  BlocksKit Unit Tests
 //
 
-#import <SenTestingKit/SenTestingKit.h>
+#import <XCTest/XCTest.h>
 #import <Blockskit/NSCache+BlocksKit.h>
 
-@interface NSCacheBlocksKitTest : SenTestCase <NSCacheDelegate>
+@interface NSCacheBlocksKitTest : XCTestCase <NSCacheDelegate>
 
 - (void)testDelegate;
 

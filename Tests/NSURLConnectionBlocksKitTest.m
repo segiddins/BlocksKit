@@ -16,13 +16,13 @@
 	NSURLRequest *request = [NSURLRequest requestWithURL:URL];
 	NSURLConnection *conn = [[NSURLConnection alloc] initWithRequest: request];
 	conn.successBlock = ^(NSURLConnection *connection, NSURLResponse *response, NSData *data) {
-		[self notify:data.length ? SenTestCaseWaitStatusSuccess : SenTestCaseWaitStatusFailure forSelector: @selector(testAsyncConnection)];
+		[self notify:data.length ? XCTestCaseWaitStatusSuccess : XCTestCaseWaitStatusFailure forSelector: @selector(testAsyncConnection)];
 	};
 	conn.failureBlock = ^(NSURLConnection *connection, NSError *err) {
-		[self notify: SenTestCaseWaitStatusFailure forSelector: @selector(testAsyncConnection)];
+		[self notify: XCTestCaseWaitStatusFailure forSelector: @selector(testAsyncConnection)];
 	};
 	[conn start];
-	[self waitForStatus: SenTestCaseWaitStatusSuccess timeout:10.0];
+	[self waitForStatus: XCTestCaseWaitStatusSuccess timeout:10.0];
 }
 
 @end

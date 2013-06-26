@@ -29,8 +29,8 @@
 		blockWorked = YES;
 	};
 	[[_subject dynamicDelegateForProtocol:@protocol(MFMailComposeViewControllerDelegate)] mailComposeController:_subject didFinishWithResult:MFMailComposeResultSent error:nil];
-	STAssertTrue(delegateWorked, @"Delegate method not called.");
-	STAssertTrue(blockWorked, @"Block handler not called.");
+	XCTAssertTrue(delegateWorked, @"Delegate method not called.");
+	XCTAssertTrue(blockWorked, @"Block handler not called.");
 }
 
 @end

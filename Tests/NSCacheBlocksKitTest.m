@@ -35,7 +35,7 @@
 		weakSelf->_total--;
 	};
 	[_subject.dynamicDelegate cache:_subject willEvictObject:nil];
-	STAssertEquals(_total, (NSInteger)0, @"The delegates should have been called!");
+	XCTAssertEquals(_total, (NSInteger)0, @"The delegates should have been called!");
 }
 
 @end

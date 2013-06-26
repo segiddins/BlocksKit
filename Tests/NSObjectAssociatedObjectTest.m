@@ -24,7 +24,7 @@ static char kNotFoundKey;
 
 	// Value is retained
 	NSString *associated = [self associatedValueForKey: &kAssociationKey];
-	STAssertTrue([associated isEqualToString: @"Hello BlocksKit"], @"associated value is %@", associated);
+	XCTAssertTrue([associated isEqualToString: @"Hello BlocksKit"], @"associated value is %@", associated);
 }
 
 - (void)testAssociatedCopyValue {
@@ -34,7 +34,7 @@ static char kNotFoundKey;
 
 	// Value is copied
 	NSString *associated = [self associatedValueForKey: &kAssociationKey];
-	STAssertTrue([associated isEqualToString: @"Hello"], @"associated value is %@", associated);
+	XCTAssertTrue([associated isEqualToString: @"Hello"], @"associated value is %@", associated);
 }
 
 - (void)testAssociatedAssignValue {
@@ -43,12 +43,12 @@ static char kNotFoundKey;
 	void *brokenPtr = (__bridge void *)subject;
 	subject = nil;
 	void *associated = (__bridge void *)[self associatedValueForKey:&kAssociationKey];
-	STAssertEquals(brokenPtr, associated, @"assign associated values equal");
+	XCTAssertEquals(brokenPtr, associated, @"assign associated values equal");
 }
 
 - (void)testAssociatedNotFound {
 	NSString *associated = [self associatedValueForKey:&kNotFoundKey];
-	STAssertNil(associated,@"associated value is not found for kNotFoundKey");
+	XCTAssertNil(associated,@"associated value is not found for kNotFoundKey");
 }
 
 @end

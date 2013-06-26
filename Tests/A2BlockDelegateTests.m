@@ -255,7 +255,7 @@
 	}];
 	obj.delegate = obj.dynamicDelegate;
 	BOOL result = [obj test];
-	STAssertTrue(result, @"Test object didn't return true");
+	XCTAssertTrue(result, @"Test object didn't return true");
 }
 
 - (void)testReturnStruct {
@@ -268,7 +268,7 @@
 	}];
 	obj.delegate = obj.dynamicDelegate;
 	BOOL result = [obj test];
-	STAssertTrue(result, @"Test object didn't return true");
+	XCTAssertTrue(result, @"Test object didn't return true");
 }
 
 - (void)testPassObject {
@@ -278,7 +278,7 @@
 	}];
 	obj.delegate = obj.dynamicDelegate;
 	BOOL result = [obj test];
-	STAssertTrue(result, @"Test object didn't return true");
+	XCTAssertTrue(result, @"Test object didn't return true");
 }
 
 - (void)testPassChar {
@@ -288,7 +288,7 @@
 	}];
 	obj.delegate = obj.dynamicDelegate;
 	BOOL result = [obj test];
-	STAssertTrue(result, @"Test object didn't return true");
+	XCTAssertTrue(result, @"Test object didn't return true");
 }
 
 - (void)testPassUChar {
@@ -298,7 +298,7 @@
 	}];
 	obj.delegate = obj.dynamicDelegate;
 	BOOL result = [obj test];
-	STAssertTrue(result, @"Test object didn't return true");
+	XCTAssertTrue(result, @"Test object didn't return true");
 }
 
 - (void)testPassShort {
@@ -308,7 +308,7 @@
 	}];
 	obj.delegate = obj.dynamicDelegate;
 	BOOL result = [obj test];
-	STAssertTrue(result, @"Test object didn't return true");
+	XCTAssertTrue(result, @"Test object didn't return true");
 }
 
 - (void)testPassUShort {
@@ -318,7 +318,7 @@
 	}];
 	obj.delegate = obj.dynamicDelegate;
 	BOOL result = [obj test];
-	STAssertTrue(result, @"Test object didn't return true");
+	XCTAssertTrue(result, @"Test object didn't return true");
 }
 
 - (void)testPassInt {
@@ -328,7 +328,7 @@
 	}];
 	obj.delegate = obj.dynamicDelegate;
 	BOOL result = [obj test];
-	STAssertTrue(result, @"Test object didn't return true");
+	XCTAssertTrue(result, @"Test object didn't return true");
 }
 
 - (void)testPassUInt {
@@ -338,7 +338,7 @@
 	}];
 	obj.delegate = obj.dynamicDelegate;
 	BOOL result = [obj test];
-	STAssertTrue(result, @"Test object didn't return true");
+	XCTAssertTrue(result, @"Test object didn't return true");
 }
 
 - (void)testPassLong {
@@ -348,7 +348,7 @@
 	}];
 	obj.delegate = obj.dynamicDelegate;
 	BOOL result = [obj test];
-	STAssertTrue(result, @"Test object didn't return true");
+	XCTAssertTrue(result, @"Test object didn't return true");
 }
 
 - (void)testPassULong {
@@ -358,7 +358,7 @@
 	}];
 	obj.delegate = obj.dynamicDelegate;
 	BOOL result = [obj test];
-	STAssertTrue(result, @"Test object didn't return true");
+	XCTAssertTrue(result, @"Test object didn't return true");
 }
 
 - (void)testPassLongLong {
@@ -368,7 +368,7 @@
 	}];
 	obj.delegate = obj.dynamicDelegate;
 	BOOL result = [obj test];
-	STAssertTrue(result, @"Test object didn't return true");
+	XCTAssertTrue(result, @"Test object didn't return true");
 }
 
 - (void)testPassULongLong {
@@ -378,7 +378,7 @@
 	}];
 	obj.delegate = obj.dynamicDelegate;
 	BOOL result = [obj test];
-	STAssertTrue(result, @"Test object didn't return true");
+	XCTAssertTrue(result, @"Test object didn't return true");
 }
 
 - (void)testPassFloat {
@@ -388,7 +388,7 @@
 	}];
 	obj.delegate = obj.dynamicDelegate;
 	BOOL result = [obj test];
-	STAssertTrue(result, @"Test object didn't return true");
+	XCTAssertTrue(result, @"Test object didn't return true");
 }
 
 - (void)testPassDouble {
@@ -398,7 +398,7 @@
 	}];
 	obj.delegate = obj.dynamicDelegate;
 	BOOL result = [obj test];
-	STAssertTrue(result, @"Test object didn't return true");
+	XCTAssertTrue(result, @"Test object didn't return true");
 }
 
 - (void)testPassArray {
@@ -408,7 +408,7 @@
 	}];
 	obj.delegate = obj.dynamicDelegate;
 	BOOL result = [obj test];
-	STAssertTrue(result, @"Test object didn't return true");
+	XCTAssertTrue(result, @"Test object didn't return true");
 }
 
 - (void)testPassStruct {
@@ -418,7 +418,7 @@
 	}];
 	obj.delegate = obj.dynamicDelegate;
 	BOOL result = [obj test];
-	STAssertTrue(result, @"Test object didn't return true");
+	XCTAssertTrue(result, @"Test object didn't return true");
 }
 
 @end

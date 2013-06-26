@@ -23,17 +23,13 @@
 		6C161CA11620C74400F04A9A /* NSOrderedSetBlocksKitTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C161CA01620C74400F04A9A /* NSOrderedSetBlocksKitTest.m */; };
 		6C161CA21620C74400F04A9A /* NSOrderedSetBlocksKitTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C161CA01620C74400F04A9A /* NSOrderedSetBlocksKitTest.m */; };
 		6C161CA41620D2B200F04A9A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6C161CA31620D2B200F04A9A /* Foundation.framework */; };
-		6C161CA61620D2B700F04A9A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6C161CA51620D2B600F04A9A /* UIKit.framework */; };
 		6C161CA81620D2C300F04A9A /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6C161CA71620D2C300F04A9A /* CoreGraphics.framework */; };
-		6C161CAA1620D2C700F04A9A /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6C161CA91620D2C700F04A9A /* MessageUI.framework */; };
 		6C161CC41620E08B00F04A9A /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6C161CBE1620E08B00F04A9A /* Default-568h@2x.png */; };
 		6C161CC51620E08B00F04A9A /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 6C161CBF1620E08B00F04A9A /* Default.png */; };
 		6C161CC61620E08B00F04A9A /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6C161CC01620E08B00F04A9A /* Default@2x.png */; };
 		6C161CC71620E08B00F04A9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C161CC11620E08B00F04A9A /* main.m */; };
 		6C161CC81620E08B00F04A9A /* PNDAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C161CC31620E08B00F04A9A /* PNDAppDelegate.m */; };
-		6C161CCA1620E0AD00F04A9A /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6C161CA91620D2C700F04A9A /* MessageUI.framework */; };
 		6C161CCB1620E0AD00F04A9A /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6C161CA71620D2C300F04A9A /* CoreGraphics.framework */; };
-		6C161CCC1620E0AD00F04A9A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6C161CA51620D2B600F04A9A /* UIKit.framework */; };
 		6C161CCD1620E0AD00F04A9A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6C161CA31620D2B200F04A9A /* Foundation.framework */; };
 		6C2427F313C5653E0016A271 /* NSMutableArray+BlocksKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 6C2427F113C5653E0016A271 /* NSMutableArray+BlocksKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		6C2427F613C5653E0016A271 /* NSMutableArray+BlocksKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C2427F213C5653E0016A271 /* NSMutableArray+BlocksKit.m */; };
@@ -133,8 +129,6 @@
 		6CF22C74161EACBD002FD317 /* trampoline.S in Sources */ = {isa = PBXBuildFile; fileRef = 6CF22BF2161EACBD002FD317 /* trampoline.S */; };
 		6CF22C75161EACBD002FD317 /* darwin.S in Sources */ = {isa = PBXBuildFile; fileRef = 6CF22BF4161EACBD002FD317 /* darwin.S */; };
 		6CF22C76161EACBD002FD317 /* ffi.c in Sources */ = {isa = PBXBuildFile; fileRef = 6CF22BF5161EACBD002FD317 /* ffi.c */; };
-		6CF22C97161EAFB8002FD317 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6CF22C96161EAFB8002FD317 /* SenTestingKit.framework */; };
-		6CF22CB2161EB048002FD317 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6CF22CB1161EB048002FD317 /* SenTestingKit.framework */; };
 		6CF22CC4161EB057002FD317 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6CF22BDD161EAC9E002FD317 /* Foundation.framework */; };
 		6CF22CC8161EB13D002FD317 /* BlocksKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6CC40A751447BB1400E47595 /* BlocksKit.framework */; };
 		6CF22CDB161EB19C002FD317 /* libBlocksKit.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6C3DBF8D1382F1BA00E6C9AA /* libBlocksKit.a */; };
@@ -183,6 +177,15 @@
 		6CF22D39161F32A9002FD317 /* UIWebViewBlocksKitTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CF22D33161F32A9002FD317 /* UIWebViewBlocksKitTest.m */; };
 		6CF22D3F161F32C5002FD317 /* MFMailComposeViewControllerBlocksKitTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CF22D3C161F32C4002FD317 /* MFMailComposeViewControllerBlocksKitTest.m */; };
 		6CF22D40161F32C5002FD317 /* MFMessageComposeViewControllerBlocksKitTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CF22D3E161F32C5002FD317 /* MFMessageComposeViewControllerBlocksKitTest.m */; };
+		A6415E22177B378600D950F5 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A6415E21177B378600D950F5 /* XCTest.framework */; };
+		A694D9A5177B382D00CDFDE3 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A694D9A4177B382D00CDFDE3 /* MessageUI.framework */; };
+		A694D9A7177B383200CDFDE3 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A694D9A6177B383200CDFDE3 /* UIKit.framework */; };
+		A694D9A8177B387000CDFDE3 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6C161CA31620D2B200F04A9A /* Foundation.framework */; };
+		A694D9A9177B387100CDFDE3 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A694D9A6177B383200CDFDE3 /* UIKit.framework */; };
+		A694D9AA177B387500CDFDE3 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A694D9A4177B382D00CDFDE3 /* MessageUI.framework */; };
+		A694D9AB177B387700CDFDE3 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6C161CA71620D2C300F04A9A /* CoreGraphics.framework */; };
+		A694D9AE177B38CF00CDFDE3 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A6415E21177B378600D950F5 /* XCTest.framework */; };
+		A694D9B0177B390B00CDFDE3 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A694D9A6177B383200CDFDE3 /* UIKit.framework */; };
 		A92C9A6313F41E0A006DA96A /* NSCache+BlocksKit.h in Headers */ = {isa = PBXBuildFile; fileRef = A92C9A6113F41E0A006DA96A /* NSCache+BlocksKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		A92C9A6413F41E0A006DA96A /* NSCache+BlocksKit.m in Sources */ = {isa = PBXBuildFile; fileRef = A92C9A6213F41E0A006DA96A /* NSCache+BlocksKit.m */; };
 		A97E4C9F13FD5B14001BB376 /* MFMailComposeViewController+BlocksKit.h in Headers */ = {isa = PBXBuildFile; fileRef = A97E4C9D13FD5B14001BB376 /* MFMailComposeViewController+BlocksKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -247,9 +250,7 @@
 		6C161C9F1620C74400F04A9A /* NSOrderedSetBlocksKitTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSOrderedSetBlocksKitTest.h; sourceTree = "<group>"; };
 		6C161CA01620C74400F04A9A /* NSOrderedSetBlocksKitTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSOrderedSetBlocksKitTest.m; sourceTree = "<group>"; };
 		6C161CA31620D2B200F04A9A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
-		6C161CA51620D2B600F04A9A /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		6C161CA71620D2C300F04A9A /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
-		6C161CA91620D2C700F04A9A /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
 		6C161CBE1620E08B00F04A9A /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		6C161CBF1620E08B00F04A9A /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
 		6C161CC01620E08B00F04A9A /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
@@ -315,12 +316,10 @@
 		6CF22BF2161EACBD002FD317 /* trampoline.S */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.asm; path = trampoline.S; sourceTree = "<group>"; };
 		6CF22BF4161EACBD002FD317 /* darwin.S */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.asm; path = darwin.S; sourceTree = "<group>"; };
 		6CF22BF5161EACBD002FD317 /* ffi.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = ffi.c; sourceTree = "<group>"; };
-		6CF22C95161EAFB8002FD317 /* OS X Tests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "OS X Tests.octest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		6CF22C96161EAFB8002FD317 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
+		6CF22C95161EAFB8002FD317 /* OS X Tests.xctest */ = {isa = PBXFileReference; explicitFileType = folder; includeInIndex = 0; path = "OS X Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6CF22CA0161EAFB8002FD317 /* OS X Tests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "OS X Tests-Info.plist"; sourceTree = "<group>"; };
 		6CF22CA7161EAFB8002FD317 /* OS X Tests-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "OS X Tests-Prefix.pch"; sourceTree = "<group>"; };
-		6CF22CB0161EB048002FD317 /* iOS Tests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "iOS Tests.octest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		6CF22CB1161EB048002FD317 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
+		6CF22CB0161EB048002FD317 /* iOS Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "iOS Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6CF22CB9161EB048002FD317 /* OS X Tests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "OS X Tests-Info.plist"; sourceTree = "<group>"; };
 		6CF22CC0161EB048002FD317 /* iOS Tests-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "iOS Tests-Prefix.pch"; sourceTree = "<group>"; };
 		6CF22CDC161EB1C3002FD317 /* A2BlockDelegateTests.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = A2BlockDelegateTests.h; sourceTree = "<group>"; };
@@ -375,6 +374,9 @@
 		6CF22D3C161F32C4002FD317 /* MFMailComposeViewControllerBlocksKitTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MFMailComposeViewControllerBlocksKitTest.m; sourceTree = "<group>"; };
 		6CF22D3D161F32C4002FD317 /* MFMessageComposeViewControllerBlocksKitTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MFMessageComposeViewControllerBlocksKitTest.h; sourceTree = "<group>"; };
 		6CF22D3E161F32C5002FD317 /* MFMessageComposeViewControllerBlocksKitTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MFMessageComposeViewControllerBlocksKitTest.m; sourceTree = "<group>"; };
+		A6415E21177B378600D950F5 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		A694D9A4177B382D00CDFDE3 /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.0.sdk/System/Library/Frameworks/MessageUI.framework; sourceTree = DEVELOPER_DIR; };
+		A694D9A6177B383200CDFDE3 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.0.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
 		A92C9A6113F41E0A006DA96A /* NSCache+BlocksKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSCache+BlocksKit.h"; sourceTree = "<group>"; };
 		A92C9A6213F41E0A006DA96A /* NSCache+BlocksKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSCache+BlocksKit.m"; sourceTree = "<group>"; };
 		A97E4C9D13FD5B14001BB376 /* MFMailComposeViewController+BlocksKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MFMailComposeViewController+BlocksKit.h"; sourceTree = "<group>"; };
@@ -404,10 +406,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6C161CCA1620E0AD00F04A9A /* MessageUI.framework in Frameworks */,
 				6C161CCB1620E0AD00F04A9A /* CoreGraphics.framework in Frameworks */,
-				6C161CCC1620E0AD00F04A9A /* UIKit.framework in Frameworks */,
 				6C161CCD1620E0AD00F04A9A /* Foundation.framework in Frameworks */,
+				A694D9B0177B390B00CDFDE3 /* UIKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -415,6 +416,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A694D9AB177B387700CDFDE3 /* CoreGraphics.framework in Frameworks */,
+				A694D9A8177B387000CDFDE3 /* Foundation.framework in Frameworks */,
+				A694D9AA177B387500CDFDE3 /* MessageUI.framework in Frameworks */,
+				A694D9A9177B387100CDFDE3 /* UIKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -433,7 +438,7 @@
 			files = (
 				6CF22CC8161EB13D002FD317 /* BlocksKit.framework in Frameworks */,
 				6CF22CC4161EB057002FD317 /* Foundation.framework in Frameworks */,
-				6CF22C97161EAFB8002FD317 /* SenTestingKit.framework in Frameworks */,
+				A6415E22177B378600D950F5 /* XCTest.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -441,12 +446,12 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6C161CAA1620D2C700F04A9A /* MessageUI.framework in Frameworks */,
 				6C161CA81620D2C300F04A9A /* CoreGraphics.framework in Frameworks */,
-				6C161CA61620D2B700F04A9A /* UIKit.framework in Frameworks */,
 				6C161CA41620D2B200F04A9A /* Foundation.framework in Frameworks */,
+				A694D9A5177B382D00CDFDE3 /* MessageUI.framework in Frameworks */,
+				A694D9A7177B383200CDFDE3 /* UIKit.framework in Frameworks */,
+				A694D9AE177B38CF00CDFDE3 /* XCTest.framework in Frameworks */,
 				6CF22CDB161EB19C002FD317 /* libBlocksKit.a in Frameworks */,
-				6CF22CB2161EB048002FD317 /* SenTestingKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -499,8 +504,8 @@
 			isa = PBXGroup;
 			children = (
 				6CC40A751447BB1400E47595 /* BlocksKit.framework */,
-				6CF22C95161EAFB8002FD317 /* OS X Tests.octest */,
-				6CF22CB0161EB048002FD317 /* iOS Tests.octest */,
+				6CF22C95161EAFB8002FD317 /* OS X Tests.xctest */,
+				6CF22CB0161EB048002FD317 /* iOS Tests.xctest */,
 				0005D5DE161FDF23007DD837 /* iOS Tests App.app */,
 			);
 			name = Products;
@@ -511,6 +516,7 @@
 			children = (
 				6CC40AAB1447BCD200E47595 /* Mac OS X */,
 				6CC08FD11385555D00DDEABB /* iOS */,
+				A694D9AD177B38C200CDFDE3 /* Testing */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -596,11 +602,10 @@
 		6CC08FD11385555D00DDEABB /* iOS */ = {
 			isa = PBXGroup;
 			children = (
-				6C161CA31620D2B200F04A9A /* Foundation.framework */,
-				6C161CA51620D2B600F04A9A /* UIKit.framework */,
-				6C161CA91620D2C700F04A9A /* MessageUI.framework */,
 				6C161CA71620D2C300F04A9A /* CoreGraphics.framework */,
-				6CF22CB1161EB048002FD317 /* SenTestingKit.framework */,
+				6C161CA31620D2B200F04A9A /* Foundation.framework */,
+				A694D9A4177B382D00CDFDE3 /* MessageUI.framework */,
+				A694D9A6177B383200CDFDE3 /* UIKit.framework */,
 				6C3DBF8D1382F1BA00E6C9AA /* libBlocksKit.a */,
 			);
 			name = iOS;
@@ -609,7 +614,6 @@
 		6CC40AAB1447BCD200E47595 /* Mac OS X */ = {
 			isa = PBXGroup;
 			children = (
-				6CF22C96161EAFB8002FD317 /* SenTestingKit.framework */,
 				6CF22BDD161EAC9E002FD317 /* Foundation.framework */,
 				6CF22BDB161EAC87002FD317 /* libffi.dylib */,
 			);
@@ -776,6 +780,14 @@
 			name = MessageUI;
 			sourceTree = "<group>";
 		};
+		A694D9AD177B38C200CDFDE3 /* Testing */ = {
+			isa = PBXGroup;
+			children = (
+				A6415E21177B378600D950F5 /* XCTest.framework */,
+			);
+			name = Testing;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -932,8 +944,8 @@
 			);
 			name = "OS X Tests";
 			productName = "OS X Tests";
-			productReference = 6CF22C95161EAFB8002FD317 /* OS X Tests.octest */;
-			productType = "com.apple.product-type.bundle";
+			productReference = 6CF22C95161EAFB8002FD317 /* OS X Tests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
 		};
 		6CF22CAF161EB048002FD317 /* iOS Tests */ = {
 			isa = PBXNativeTarget;
@@ -952,8 +964,8 @@
 			);
 			name = "iOS Tests";
 			productName = "iOS Tests";
-			productReference = 6CF22CB0161EB048002FD317 /* iOS Tests.octest */;
-			productType = "com.apple.product-type.bundle";
+			productReference = 6CF22CB0161EB048002FD317 /* iOS Tests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
 
@@ -963,6 +975,11 @@
 			attributes = {
 				LastUpgradeCheck = 0500;
 				ORGANIZATIONNAME = "Pandamonia LLC";
+				TargetAttributes = {
+					6CF22CAF161EB048002FD317 = {
+						TestTargetID = 0005D5DD161FDF23007DD837;
+					};
+				};
 			};
 			buildConfigurationList = 6C3DBF871382F1BA00E6C9AA /* Build configuration list for PBXProject "BlocksKit" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -1222,6 +1239,10 @@
 			buildSettings = {
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(DEVELOPER_LIBRARY_DIR)/Frameworks",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Tests/iOS Tests App-Prefix.pch";
 				INFOPLIST_FILE = "Tests/iOS Tests App-Info.plist";
@@ -1238,6 +1259,10 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(DEVELOPER_LIBRARY_DIR)/Frameworks",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Tests/iOS Tests App-Prefix.pch";
 				INFOPLIST_FILE = "Tests/iOS Tests App-Info.plist";
@@ -1398,14 +1423,16 @@
 			buildSettings = {
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COMBINE_HIDPI_IMAGES = YES;
-				FRAMEWORK_SEARCH_PATHS = "\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(DEVELOPER_LIBRARY_DIR)/Frameworks",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Tests/OS X Tests-Prefix.pch";
 				INFOPLIST_FILE = "Tests/OS X Tests-Info.plist";
 				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = macosx;
-				WRAPPER_EXTENSION = octest;
 			};
 			name = Debug;
 		};
@@ -1415,13 +1442,15 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COMBINE_HIDPI_IMAGES = YES;
 				COPY_PHASE_STRIP = YES;
-				FRAMEWORK_SEARCH_PATHS = "\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(DEVELOPER_LIBRARY_DIR)/Frameworks",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Tests/OS X Tests-Prefix.pch";
 				INFOPLIST_FILE = "Tests/OS X Tests-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = macosx;
-				WRAPPER_EXTENSION = octest;
 			};
 			name = Release;
 		};
@@ -1431,8 +1460,8 @@
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/iOS Tests App.app/iOS Tests App";
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				FRAMEWORK_SEARCH_PATHS = (
-					"\"$(SDKROOT)/Developer/Library/Frameworks\"",
-					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(DEVELOPER_LIBRARY_DIR)/Frameworks",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Tests/iOS Tests-Prefix.pch";
@@ -1445,8 +1474,7 @@
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
-				TEST_HOST = "${BUNDLE_LOADER}";
-				WRAPPER_EXTENSION = octest;
+				TEST_HOST = "$(BUNDLE_LOADER)";
 			};
 			name = Debug;
 		};
@@ -1457,8 +1485,8 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = YES;
 				FRAMEWORK_SEARCH_PATHS = (
-					"\"$(SDKROOT)/Developer/Library/Frameworks\"",
-					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(DEVELOPER_LIBRARY_DIR)/Frameworks",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Tests/iOS Tests-Prefix.pch";
@@ -1470,8 +1498,7 @@
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
-				TEST_HOST = "${BUNDLE_LOADER}";
-				WRAPPER_EXTENSION = octest;
+				TEST_HOST = "$(BUNDLE_LOADER)";
 			};
 			name = Release;
 		};

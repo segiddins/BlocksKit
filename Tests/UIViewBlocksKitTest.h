@@ -3,10 +3,10 @@
 //  BlocksKit Unit Tests
 //
 
-#import <SenTestingKit/SenTestingKit.h>
+#import <XCTest/XCTest.h>
 #import <BlocksKit/UIView+BlocksKit.h>
 
-@interface UIViewBlocksKitTest : SenTestCase
+@interface UIViewBlocksKitTest : XCTestCase
 
 - (void)testOnTouchDown;
 - (void)testOnTouchMove;

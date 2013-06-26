@@ -3,16 +3,16 @@
 //  BlocksKit Unit Tests
 //
 
-#import <SenTestingKit/SenTestingKit.h>
+#import <XCTest/XCTest.h>
 
-typedef NS_ENUM(NSUInteger, SenTestCaseWaitStatus) {
-	SenTestCaseWaitStatusUnknown = 0,
-	SenTestCaseWaitStatusSuccess,
-	SenTestCaseWaitStatusFailure,
-	SenTestCaseWaitStatusCancelled
+typedef NS_ENUM(NSUInteger, XCTestCaseWaitStatus) {
+	XCTestCaseWaitStatusUnknown = 0,
+	XCTestCaseWaitStatusSuccess,
+	XCTestCaseWaitStatusFailure,
+	XCTestCaseWaitStatusCancelled
 };
 
-@interface BKAsyncTestCase : SenTestCase
+@interface BKAsyncTestCase : XCTestCase
 
 @property (strong, nonatomic) NSArray *runLoopModes;
 

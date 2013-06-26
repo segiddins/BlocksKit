@@ -3,10 +3,10 @@
 //  BlocksKit Unit Tests
 //
 
-#import <SenTestingKit/SenTestingKit.h>
+#import <XCTest/XCTest.h>
 #import <BlocksKit/NSObject+BlockObservation.h>
 
-@interface NSObjectBlockObservationTest : SenTestCase
+@interface NSObjectBlockObservationTest : XCTestCase
 
 - (void)testBoolKeyValueObservation;
 - (void)testNSNumberKeyValueObservation;

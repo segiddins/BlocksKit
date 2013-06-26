@@ -34,9 +34,9 @@
 	NSMutableOrderedSet *subject = _subject;
 	[subject performSelect:validationBlock];
 
-	STAssertEquals(_total,(NSInteger)6,@"total length of \"122333\" is %d",_total);
+	XCTAssertEquals(_total,(NSInteger)6,@"total length of \"122333\" is %d",_total);
 	NSMutableOrderedSet *target = [NSMutableOrderedSet orderedSetWithArray: @[ @"1", @"22" ]];
-	STAssertEqualObjects(subject,target,@"selected items are %@",_subject);
+	XCTAssertEqualObjects(subject,target,@"selected items are %@",_subject);
 }
 
 - (void)testSelectedNone {
@@ -48,8 +48,8 @@
 	NSMutableOrderedSet *subject = _subject;
 	[subject performSelect:validationBlock];
 
-	STAssertEquals(_total,(NSInteger)6,@"total length of \"122333\" is %d",_total);
-	STAssertEquals(subject.count,(NSUInteger)0,@"no item is selected");
+	XCTAssertEquals(_total,(NSInteger)6,@"total length of \"122333\" is %d",_total);
+	XCTAssertEquals(subject.count,(NSUInteger)0,@"no item is selected");
 }
 
 - (void)testReject {
@@ -61,9 +61,9 @@
 	NSMutableOrderedSet *subject = _subject;
 	[subject performReject:validationBlock];
 
-	STAssertEquals(_total,(NSInteger)6,@"total length of \"122333\" is %d",_total);
+	XCTAssertEquals(_total,(NSInteger)6,@"total length of \"122333\" is %d",_total);
 	NSMutableOrderedSet *target = [NSMutableOrderedSet orderedSetWithArray: @[ @"1", @"22" ]];
-	STAssertEqualObjects(subject,target,@"not rejected items are %@",_subject);
+	XCTAssertEqualObjects(subject,target,@"not rejected items are %@",_subject);
 }
 
 - (void)testRejectedAll {
@@ -75,8 +75,8 @@
 	NSMutableOrderedSet *subject = _subject;
 	[subject performReject:validationBlock];
 
-	STAssertEquals(_total,(NSInteger)6,@"total length of \"122333\" is %d",_total);
-	STAssertEquals(subject.count,(NSUInteger)0,@"all items are rejected");
+	XCTAssertEquals(_total,(NSInteger)6,@"total length of \"122333\" is %d",_total);
+	XCTAssertEquals(subject.count,(NSUInteger)0,@"all items are rejected");
 }
 
 - (void)testMap {
@@ -87,9 +87,9 @@
 	NSMutableOrderedSet *subject = _subject;
 	[subject performMap:transformBlock];
 
-	STAssertEquals(_total,(NSInteger)6,@"total length of \"122333\" is %d",_total);
+	XCTAssertEquals(_total,(NSInteger)6,@"total length of \"122333\" is %d",_total);
 	NSMutableOrderedSet *target = [NSMutableOrderedSet orderedSetWithArray: @[ @"1", @"22", @"333" ]];
-	STAssertEqualObjects(subject,target,@"transformed items are %@",_subject);
+	XCTAssertEqualObjects(subject,target,@"transformed items are %@",_subject);
 }
 
 @end

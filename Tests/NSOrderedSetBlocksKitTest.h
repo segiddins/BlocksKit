@@ -6,10 +6,10 @@
 //  Copyright (c) 2012 Pandamonia LLC. All rights reserved.
 //
 
-#import <SenTestingKit/SenTestingKit.h>
+#import <XCTest/XCTest.h>
 #import <BlocksKit/NSOrderedSet+BlocksKit.h>
 
-@interface NSOrderedSetBlocksKitTest : SenTestCase
+@interface NSOrderedSetBlocksKitTest : XCTestCase
 
 - (void)testEach;
 - (void)testMatch;

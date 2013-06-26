@@ -37,7 +37,7 @@
 		_total += [sender length];
 	};
 	[_subject each:senderBlock];
-	STAssertEquals(_total, (NSInteger)6, @"total length of \"122333\" is %d", _total);
+	XCTAssertEquals(_total, (NSInteger)6, @"total length of \"122333\" is %d", _total);
 }
 
 - (void)testMatch {
@@ -50,8 +50,8 @@
 		return match;
 	};
 	id found = [_subject match:validationBlock];
-	STAssertEquals(_total, (NSInteger)3, @"total length of \"122\" is %d", _total);
-	STAssertEquals(found, @"22", @"matched object is %@", found);
+	XCTAssertEquals(_total, (NSInteger)3, @"total length of \"122\" is %d", _total);
+	XCTAssertEquals(found, @"22", @"matched object is %@", found);
 }
 
 - (void)testNotMatch {
@@ -64,8 +64,8 @@
 		return match;
 	};
 	id found = [_subject match:validationBlock];
-	STAssertEquals(_total, (NSInteger)6, @"total length of \"122333\" is %d", _total);
-	STAssertNil(found, @"no matched object");
+	XCTAssertEquals(_total, (NSInteger)6, @"total length of \"122333\" is %d", _total);
+	XCTAssertNil(found, @"no matched object");
 }
 
 - (void)testSelect {
@@ -80,9 +80,9 @@
 	NSOrderedSet *subject = _subject;
 	NSOrderedSet *found = [subject select:validationBlock];
 
-	STAssertEquals(_total, (NSInteger)6, @"total length of \"122333\" is %d", _total);
+	XCTAssertEquals(_total, (NSInteger)6, @"total length of \"122333\" is %d", _total);
 	NSOrderedSet *target = [NSOrderedSet orderedSetWithArray: @[ @"1", @"22" ]];
-	STAssertEqualObjects(found, target, @"selected items are %@", found);
+	XCTAssertEqualObjects(found, target, @"selected items are %@", found);
 }
 
 - (void)testSelectedNone {
@@ -97,8 +97,8 @@
 	NSOrderedSet *subject = _subject;
 	NSOrderedSet *found = [subject select:validationBlock];
 
-	STAssertEquals(_total, (NSInteger)6, @"total length of \"122333\" is %d", _total);
-	STAssertTrue(found.count == 0, @"no item is selected");
+	XCTAssertEquals(_total, (NSInteger)6, @"total length of \"122333\" is %d", _total);
+	XCTAssertTrue(found.count == 0, @"no item is selected");
 }
 
 - (void)testReject {
@@ -113,9 +113,9 @@
 	NSOrderedSet *subject = _subject;
 	NSOrderedSet *left = [subject reject:validationBlock];
 
-	STAssertEquals(_total, (NSInteger)6, @"total length of \"122333\" is %d", _total);
+	XCTAssertEquals(_total, (NSInteger)6, @"total length of \"122333\" is %d", _total);
 	NSOrderedSet *target = [NSOrderedSet orderedSetWithArray: @[ @"1", @"22" ]];
-	STAssertEqualObjects(left, target, @"not rejected items are %@", left);
+	XCTAssertEqualObjects(left, target, @"not rejected items are %@", left);
 }
 
 - (void)testRejectedAll {
@@ -130,8 +130,8 @@
 	NSOrderedSet *subject = _subject;
 	NSOrderedSet *left = [subject reject:validationBlock];
 
-	STAssertEquals(_total, (NSInteger)6, @"total length of \"122333\" is %d", _total);
-	STAssertTrue(left.count == 0, @"all items are rejected");
+	XCTAssertEquals(_total, (NSInteger)6, @"total length of \"122333\" is %d", _total);
+	XCTAssertTrue(left.count == 0, @"all items are rejected");
 }
 
 - (void)testMap {
@@ -145,9 +145,9 @@
 	NSOrderedSet *subject = _subject;
 	NSOrderedSet *transformed = [subject map:transformBlock];
 
-	STAssertEquals(_total, (NSInteger)6, @"total length of \"122333\" is %d", _total);
+	XCTAssertEquals(_total, (NSInteger)6, @"total length of \"122333\" is %d", _total);
 	NSOrderedSet *target = [NSOrderedSet orderedSetWithArray: @[ @"1", @"2", @"3" ]];
-	STAssertEqualObjects(transformed, target, @"transformed items are %@", transformed);
+	XCTAssertEqualObjects(transformed, target, @"transformed items are %@", transformed);
 }
 
 - (void)testReduceWithBlock {
@@ -158,7 +158,7 @@
 		return [sum stringByAppendingString:obj];
 	};
 	NSString *concatenated = [_subject reduce:@"" withBlock:accumlationBlock];
-	STAssertTrue([concatenated isEqualToString: @"122333"], @"concatenated string is %@", concatenated);
+	XCTAssertTrue([concatenated isEqualToString: @"122333"], @"concatenated string is %@", concatenated);
 }
 
 - (void)testAny {
@@ -174,10 +174,10 @@
 	};
 
 	BOOL letterExists = [_subject any: existsBlockTrue];
-	STAssertTrue(letterExists, @"letter is not in array");
+	XCTAssertTrue(letterExists, @"letter is not in array");
 
 	BOOL letterDoesNotExist = [_subject any: existsBlockFalse];
-	STAssertFalse(letterDoesNotExist, @"letter is in array");
+	XCTAssertFalse(letterDoesNotExist, @"letter is in array");
 }
 
 - (void)testAll {
@@ -193,10 +193,10 @@
 	};
 
 	BOOL allNamesStartWithJ = [names all: nameStartsWithJ];
-	STAssertTrue(allNamesStartWithJ, @"all names do not start with J in array");
+	XCTAssertTrue(allNamesStartWithJ, @"all names do not start with J in array");
 
 	BOOL allNamesDoNotStartWithJ = [names2 all: nameStartsWithJ];
-	STAssertFalse(allNamesDoNotStartWithJ, @"all names do start with J in array");
+	XCTAssertFalse(allNamesDoNotStartWithJ, @"all names do start with J in array");
 }
 
 - (void)testNone {
@@ -212,10 +212,10 @@
 	};
 
 	BOOL noNamesStartWithM = [names none: nameStartsWithM];
-	STAssertTrue(noNamesStartWithM, @"some names start with M in array");
+	XCTAssertTrue(noNamesStartWithM, @"some names start with M in array");
 
 	BOOL someNamesStartWithM = [names2 none: nameStartsWithM];
-	STAssertFalse(someNamesStartWithM, @"no names start with M in array");
+	XCTAssertFalse(someNamesStartWithM, @"no names start with M in array");
 }
 
 - (void)testCorresponds {
@@ -227,7 +227,7 @@
 	BOOL doesCorrespond = [numbers corresponds: letters withBlock: ^(id number, id letter) {
 		return [[number stringValue] isEqualToString: letter];
 	}];
-	STAssertTrue(doesCorrespond, @"1,2,3 does not correspond to \"1\",\"2\",\"3\"");
+	XCTAssertTrue(doesCorrespond, @"1,2,3 does not correspond to \"1\",\"2\",\"3\"");
 }
 
 @end

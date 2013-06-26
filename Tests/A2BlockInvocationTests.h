@@ -3,10 +3,10 @@
 //  BlocksKit Unit Tests
 //
 
-#import <SenTestingKit/SenTestingKit.h>
+#import <XCTest/XCTest.h>
 #import <BlocksKit/A2BlockInvocation.h>
 
-@interface A2BlockInvocationTests : SenTestCase
+@interface A2BlockInvocationTests : XCTestCase
 
 - (void)testVoidBlockInvocation;
 - (void)testReturnObjectBlockInvocation;

@@ -26,9 +26,9 @@
 		return match;
 	};
 	[_subject performSelect:validationBlock];
-	STAssertEquals(_total,(NSInteger)6,@"total length of \"122333\" is %d",_total);
+	XCTAssertEquals(_total,(NSInteger)6,@"total length of \"122333\" is %d",_total);
 	NSMutableSet *target = [NSMutableSet setWithArray: @[ @"1", @"22" ]];
-	STAssertEqualObjects(_subject,target,@"selected items are %@",_subject);
+	XCTAssertEqualObjects(_subject,target,@"selected items are %@",_subject);
 }
 
 - (void)testSelectedNone {
@@ -38,8 +38,8 @@
 		return match;
 	};
 	[_subject performSelect:validationBlock];
-	STAssertEquals(_total,(NSInteger)6,@"total length of \"122333\" is %d",_total);
-	STAssertEquals(_subject.count,(NSUInteger)0,@"no item is selected");
+	XCTAssertEquals(_total,(NSInteger)6,@"total length of \"122333\" is %d",_total);
+	XCTAssertEquals(_subject.count,(NSUInteger)0,@"no item is selected");
 }
 
 - (void)testReject {
@@ -49,9 +49,9 @@
 		return match;
 	};
 	[_subject performReject:validationBlock];
-	STAssertEquals(_total,(NSInteger)6,@"total length of \"122333\" is %d",_total);
+	XCTAssertEquals(_total,(NSInteger)6,@"total length of \"122333\" is %d",_total);
 	NSMutableSet *target = [NSMutableSet setWithArray: @[ @"1", @"22" ]];
-	STAssertEqualObjects(_subject,target,@"not rejected items are %@",_subject);
+	XCTAssertEqualObjects(_subject,target,@"not rejected items are %@",_subject);
 }
 
 - (void)testRejectedAll {
@@ -61,8 +61,8 @@
 		return match;
 	};
 	[_subject performReject:validationBlock];
-	STAssertEquals(_total,(NSInteger)6,@"total length of \"122333\" is %d",_total);
-	STAssertEquals(_subject.count,(NSUInteger)0,@"all items are rejected");
+	XCTAssertEquals(_total,(NSInteger)6,@"total length of \"122333\" is %d",_total);
+	XCTAssertEquals(_subject.count,(NSUInteger)0,@"all items are rejected");
 }
 
 - (void)testMap {
@@ -71,9 +71,9 @@
 		return [obj substringToIndex:1];
 	};
 	[_subject performMap:transformBlock];
-	STAssertEquals(_total,(NSInteger)6,@"total length of \"122333\" is %d",_total);
+	XCTAssertEquals(_total,(NSInteger)6,@"total length of \"122333\" is %d",_total);
 	NSMutableSet *target = [NSMutableSet setWithArray: @[ @"1", @"2", @"3" ]];
-	STAssertEqualObjects(_subject,target,@"transformed items are %@",_subject);
+	XCTAssertEqualObjects(_subject,target,@"transformed items are %@",_subject);
 }
 
 @end

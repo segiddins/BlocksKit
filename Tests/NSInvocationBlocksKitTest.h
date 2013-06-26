@@ -3,10 +3,10 @@
 //  BlocksKit Unit Tests
 //
 
-#import <SenTestingKit/SenTestingKit.h>
+#import <XCTest/XCTest.h>
 #import <BlocksKit/NSInvocation+BlocksKit.h>
 
-@interface NSInvocationBlocksKitTest : SenTestCase
+@interface NSInvocationBlocksKitTest : XCTestCase
 
 - (void)testBlockInvocation;
 

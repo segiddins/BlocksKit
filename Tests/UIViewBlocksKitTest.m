@@ -24,7 +24,7 @@
 	
 	[_subject touchesBegan:[NSSet set] withEvent:nil];
 	
-	STAssertTrue(onTouchDownBlock, @"Block handler was not called");
+	XCTAssertTrue(onTouchDownBlock, @"Block handler was not called");
 }
 
 - (void)testOnTouchMove {
@@ -35,7 +35,7 @@
 	
 	[_subject touchesMoved:[NSSet set] withEvent:nil];
 	
-	STAssertTrue(onTouchMoveBlock, @"Block handler was not called");
+	XCTAssertTrue(onTouchMoveBlock, @"Block handler was not called");
 }
 
 - (void)testOnTouchUp {
@@ -46,7 +46,7 @@
 	
 	[_subject touchesEnded:[NSSet set] withEvent:nil];
 	
-	STAssertTrue(onTouchUpBlock, @"Block handler was not called");
+	XCTAssertTrue(onTouchUpBlock, @"Block handler was not called");
 }
 
 @end

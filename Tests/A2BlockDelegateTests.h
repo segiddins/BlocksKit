@@ -3,7 +3,7 @@
 //  BlocksKit Unit Tests
 //
 
-#import <SenTestingKit/SenTestingKit.h>
+#import <XCTest/XCTest.h>
 #import <BlocksKit/A2BlockDelegate.h>
 #import <BlocksKit/A2DynamicDelegate.h>
 #import "A2DynamicDelegateTests.h"
@@ -146,7 +146,7 @@
 
 #pragma mark -
 
-@interface A2BlockDelegateTests : SenTestCase
+@interface A2BlockDelegateTests : XCTestCase
 
 - (void)testReturnObject;
 - (void)testReturnStruct;

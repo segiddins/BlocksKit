@@ -3,10 +3,10 @@
 //  BlocksKit Unit Tests
 //
 
-#import <SenTestingKit/SenTestingKit.h>
+#import <XCTest/XCTest.h>
 #import <BlocksKit/UIAlertView+BlocksKit.h>
 
-@interface UIAlertViewBlocksKitTest : SenTestCase
+@interface UIAlertViewBlocksKitTest : XCTestCase
 
 - (void)testInit;
 - (void)testAddButtonWithHandler;

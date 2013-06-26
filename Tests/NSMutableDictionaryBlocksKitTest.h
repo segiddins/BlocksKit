@@ -3,10 +3,10 @@
 //  BlocksKit Unit Tests
 //
 
-#import <SenTestingKit/SenTestingKit.h>
+#import <XCTest/XCTest.h>
 #import <BlocksKit/NSMutableDictionary+BlocksKit.h>
 
-@interface NSMutableDictionaryBlocksKitTest : SenTestCase
+@interface NSMutableDictionaryBlocksKitTest : XCTestCase
 
 - (void)testSelect;
 - (void)testSelectedNone;

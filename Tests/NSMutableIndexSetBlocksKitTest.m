@@ -27,9 +27,9 @@
 		return match;
 	};
 	[_subject performSelect:indexValidationBlock];
-	STAssertEqualObjects(order,@"123",@"the index loop order is %@",order);
+	XCTAssertEqualObjects(order,@"123",@"the index loop order is %@",order);
 	NSMutableIndexSet *target = [NSMutableIndexSet indexSetWithIndexesInRange:NSMakeRange(1,2)];
-	STAssertEqualObjects(_subject,target,@"the selected index set is %@",_subject);
+	XCTAssertEqualObjects(_subject,target,@"the selected index set is %@",_subject);
 }
 
 - (void)testSelectedNone {
@@ -40,8 +40,8 @@
 		return match;
 	};
 	[_subject performSelect:indexValidationBlock];
-	STAssertEqualObjects(order,@"123",@"the index loop order is %@",order);
-	STAssertEquals(_subject.count,(NSUInteger)0,@"no index found");
+	XCTAssertEqualObjects(order,@"123",@"the index loop order is %@",order);
+	XCTAssertEquals(_subject.count,(NSUInteger)0,@"no index found");
 }
 
 - (void)testReject {
@@ -52,8 +52,8 @@
 		return match;
 	};
 	[_subject performReject:indexValidationBlock];
-	STAssertEqualObjects(order,@"123",@"the index loop order is %@",order);
-	STAssertEquals(_subject.count,(NSUInteger)0,@"all indexes are rejected");
+	XCTAssertEqualObjects(order,@"123",@"the index loop order is %@",order);
+	XCTAssertEquals(_subject.count,(NSUInteger)0,@"all indexes are rejected");
 }
 
 - (void)testRejectedNone {
@@ -64,9 +64,9 @@
 		return match;
 	};
 	[_subject performReject:indexValidationBlock];
-	STAssertEqualObjects(order,@"123",@"the index loop order is %@",order);
+	XCTAssertEqualObjects(order,@"123",@"the index loop order is %@",order);
 	NSMutableIndexSet *target = [NSMutableIndexSet indexSetWithIndexesInRange:NSMakeRange(1,3)];
-	STAssertEqualObjects(_subject,target,@"the rejected index set is %@",_subject);
+	XCTAssertEqualObjects(_subject,target,@"the rejected index set is %@",_subject);
 }
 
 @end

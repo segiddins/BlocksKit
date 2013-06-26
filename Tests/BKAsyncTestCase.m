@@ -9,16 +9,16 @@
 #import "BKAsyncTestCase.h"
 #import <objc/runtime.h>
 
-typedef NS_ENUM(NSUInteger, SenTestCaseError) {
-	SenTestCaseErrorNone,
-	SenTestCaseErrorUnprepared,
-	SenTestCaseErrorTimedOut,
-	SenTestCaseErrorInvalidStatus
+typedef NS_ENUM(NSUInteger, XCTestCaseError) {
+	XCTestCaseErrorNone,
+	XCTestCaseErrorUnprepared,
+	XCTestCaseErrorTimedOut,
+	XCTestCaseErrorInvalidStatus
 };
 
 @interface BKAsyncTestCase () {
-	SenTestCaseWaitStatus waitForStatus_;
-	SenTestCaseWaitStatus notifiedStatus_;
+	XCTestCaseWaitStatus waitForStatus_;
+	XCTestCaseWaitStatus notifiedStatus_;
 
 	BOOL prepared_; // Whether prepared was called before waitForStatus:timeout:
 	NSRecursiveLock *lock_; // Lock to synchronize on
@@ -29,14 +29,13 @@ typedef NS_ENUM(NSUInteger, SenTestCaseError) {
 
 @implementation BKAsyncTestCase
 
-- (void)_setUp {
+- (void)setUp {
 	lock_ = [[NSRecursiveLock alloc] init];
 	prepared_ = NO;
-	notifiedStatus_ = SenTestCaseWaitStatusUnknown;
+	notifiedStatus_ = XCTestCaseWaitStatusUnknown;
 }
 
-// Internal GHUnit tear down
-- (void)_tearDown {
+- (void)tearDown {
 	waitSelector_ = NULL;
 	if (prepared_) [lock_ unlock]; // If we prepared but never waited we need to unlock
 	lock_ = nil;
@@ -50,12 +49,12 @@ typedef NS_ENUM(NSUInteger, SenTestCaseError) {
 	[lock_ lock];
 	prepared_ = YES;
 	waitSelector_ = selector;
-	notifiedStatus_ = SenTestCaseWaitStatusUnknown;
+	notifiedStatus_ = XCTestCaseWaitStatusUnknown;
 }
 
-- (SenTestCaseError)_waitFor:(NSInteger)status timeout:(NSTimeInterval)timeout {
+- (XCTestCaseError)_waitFor:(NSInteger)status timeout:(NSTimeInterval)timeout {
 	if (!prepared_) {
-		return SenTestCaseErrorUnprepared;
+		return XCTestCaseErrorUnprepared;
 	}
 	prepared_ = NO;
 
@@ -68,7 +67,7 @@ typedef NS_ENUM(NSUInteger, SenTestCaseError) {
 	NSDate *runUntilDate = [NSDate dateWithTimeIntervalSinceNow:timeout];
 	BOOL timedOut = NO;
 	NSInteger runIndex = 0;
-	while(notifiedStatus_ == SenTestCaseWaitStatusUnknown) {
+	while(notifiedStatus_ == XCTestCaseWaitStatusUnknown) {
 		NSString *mode = [_runLoopModes objectAtIndex:(runIndex++ % [_runLoopModes count])];
 
 		[lock_ unlock];
@@ -88,12 +87,12 @@ typedef NS_ENUM(NSUInteger, SenTestCaseError) {
 	[lock_ unlock];
 
 	if (timedOut) {
-		return SenTestCaseErrorTimedOut;
+		return XCTestCaseErrorTimedOut;
 	} else if (waitForStatus_ != notifiedStatus_) {
-		return SenTestCaseErrorInvalidStatus;
+		return XCTestCaseErrorInvalidStatus;
 	}
 
-	return SenTestCaseErrorNone;
+	return XCTestCaseErrorNone;
 }
 
 - (void)waitFor:(NSInteger)status timeout:(NSTimeInterval)timeout {
@@ -101,20 +100,20 @@ typedef NS_ENUM(NSUInteger, SenTestCaseError) {
 }
 
 - (void)waitForStatus:(NSInteger)status timeout:(NSTimeInterval)timeout {
-	SenTestCaseError error = [self _waitFor:status timeout:timeout];
-	if (error == SenTestCaseErrorTimedOut) {
-		STFail(@"Request timed out");
-	} else if (error == SenTestCaseErrorInvalidStatus) {
-		STFail(@"Request finished with the wrong status: %d != %d", status, notifiedStatus_);
-	} else if (error == SenTestCaseErrorUnprepared) {
-		STFail(@"Call prepare before calling asynchronous method and waitForStatus:timeout:");
+	XCTestCaseError error = [self _waitFor:status timeout:timeout];
+	if (error == XCTestCaseErrorTimedOut) {
+		XCTFail(@"Request timed out");
+	} else if (error == XCTestCaseErrorInvalidStatus) {
+		XCTFail(@"Request finished with the wrong status: %d != %d", status, notifiedStatus_);
+	} else if (error == XCTestCaseErrorUnprepared) {
+		XCTFail(@"Call prepare before calling asynchronous method and waitForStatus:timeout:");
 	}
 }
 
 - (void)waitForTimeout:(NSTimeInterval)timeout {
-	SenTestCaseError error = [self _waitFor:-1 timeout:timeout];
-	if (error != SenTestCaseErrorTimedOut) {
-		STFail(@"Request should have timed out");
+	XCTestCaseError error = [self _waitFor:-1 timeout:timeout];
+	if (error != XCTestCaseErrorTimedOut) {
+		XCTFail(@"Request should have timed out");
 	}
 }
 
@@ -127,7 +126,7 @@ typedef NS_ENUM(NSUInteger, SenTestCaseError) {
 
 	NSInteger runIndex = 0;
 
-	while ([runUntilDate compare:[NSDate dateWithTimeIntervalSinceNow:0]] == NSOrderedDescending) {
+	while ([runUntilDate timeIntervalSinceNow] < 0) {
 		NSString *mode = [_runLoopModes objectAtIndex:(runIndex++ % [_runLoopModes count])];
 
 		[lock_ unlock];

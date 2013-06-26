@@ -3,10 +3,10 @@
 //  BlocksKit Unit Tests
 //
 
-#import <SenTestingKit/SenTestingKit.h>
+#import <XCTest/XCTest.h>
 #import <BlocksKit/NSObject+AssociatedObjects.h>
 
-@interface NSObjectAssociatedObjectTest : SenTestCase
+@interface NSObjectAssociatedObjectTest : XCTestCase
 
 - (void)testAssociatedRetainValue;
 - (void)testAssociatedCopyValue;

@@ -3,10 +3,10 @@
 //  BlocksKit Unit Tests
 //
 
-#import <SenTestingKit/SenTestingKit.h>
+#import <XCTest/XCTest.h>
 #import <BlocksKit/NSMutableOrderedSet+BlocksKit.h>
 
-@interface NSMutableOrderedSetBlocksKitTest : SenTestCase
+@interface NSMutableOrderedSetBlocksKitTest : XCTestCase
 
 - (void)testSelect;
 - (void)testSelectedNone;

@@ -3,10 +3,10 @@
 //  BlocksKit Unit Tests
 //
 
-#import <SenTestingKit/SenTestingKit.h>
+#import <XCTest/XCTest.h>
 #import <BlocksKit/MFMailComposeViewController+BlocksKit.h>
 
-@interface MFMailComposeViewControllerBlocksKitTest : SenTestCase <MFMailComposeViewControllerDelegate>
+@interface MFMailComposeViewControllerBlocksKitTest : XCTestCase <MFMailComposeViewControllerDelegate>
 
 - (void)testCompletionBlock;
 

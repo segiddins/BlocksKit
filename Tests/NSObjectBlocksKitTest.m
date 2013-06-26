@@ -23,13 +23,13 @@
 - (void)testPerformBlockAfterDelay {
 	BKSenderBlock senderBlock = ^(NSObjectBlocksKitTest *sender) {
 		[_subject appendString:@"BlocksKit"];
-		[sender notify: SenTestCaseWaitStatusSuccess forSelector: @selector(testPerformBlockAfterDelay)];
+		[sender notify: XCTestCaseWaitStatusSuccess forSelector: @selector(testPerformBlockAfterDelay)];
 	};
 	[self prepare];
 	id block = [self performBlock:senderBlock afterDelay:0.5];
-	STAssertNotNil(block,@"block is nil");
-	[self waitForStatus: SenTestCaseWaitStatusSuccess timeout:1.0];
-	STAssertEqualObjects(_subject,@"Hello BlocksKit",@"subject string is %@",_subject);
+	XCTAssertNotNil(block,@"block is nil");
+	[self waitForStatus: XCTestCaseWaitStatusSuccess timeout:1.0];
+	XCTAssertEqualObjects(_subject,@"Hello BlocksKit",@"subject string is %@",_subject);
 }
 
 - (void)testClassPerformBlockAfterDelay {
@@ -38,23 +38,23 @@
 	[self prepare];
 	id blk = [NSObject performBlock:^{
 		[subject appendString:@"BlocksKit"];
-		[test notify: SenTestCaseWaitStatusSuccess forSelector: @selector(testClassPerformBlockAfterDelay)];
+		[test notify: XCTestCaseWaitStatusSuccess forSelector: @selector(testClassPerformBlockAfterDelay)];
 	} afterDelay:0.5];
-	STAssertNotNil(blk,@"block is nil");
-	[self waitForStatus: SenTestCaseWaitStatusSuccess timeout:1.0];
-	STAssertEqualObjects(subject,@"Hello BlocksKit",@"subject string is %@",subject);
+	XCTAssertNotNil(blk,@"block is nil");
+	[self waitForStatus: XCTestCaseWaitStatusSuccess timeout:1.0];
+	XCTAssertEqualObjects(subject,@"Hello BlocksKit",@"subject string is %@",subject);
 }
 
 - (void)testCancel {
 	[self prepare];
 	id block = [self performBlock:^(NSObjectBlocksKitTest * sender) {
 		[_subject appendString:@"BlocksKit"];
-		[sender notify: SenTestCaseWaitStatusSuccess];
+		[sender notify: XCTestCaseWaitStatusSuccess];
 	} afterDelay:0.1];
-	STAssertNotNil(block,@"block is nil");
+	XCTAssertNotNil(block,@"block is nil");
 	[NSObject cancelBlock:block];
 	[self waitForTimeout:0.5];
-	STAssertEqualObjects(_subject,@"Hello ",@"subject string is %@",_subject);
+	XCTAssertEqualObjects(_subject,@"Hello ",@"subject string is %@",_subject);
 }
 
 @end

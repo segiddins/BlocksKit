@@ -3,10 +3,10 @@
 //  BlocksKit Unit Tests
 //
 
-#import <SenTestingKit/SenTestingKit.h>
+#import <XCTest/XCTest.h>
 #import <BlocksKit/UIControl+BlocksKit.h>
 
-@interface UIControlBlocksKitTest : SenTestCase
+@interface UIControlBlocksKitTest : XCTestCase
 
 - (void)testHasEventHandler;
 - (void)testInvokeEventHandler;

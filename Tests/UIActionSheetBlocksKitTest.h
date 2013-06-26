@@ -3,10 +3,10 @@
 //  BlocksKit Unit Tests
 //
 
-#import <SenTestingKit/SenTestingKit.h>
+#import <XCTest/XCTest.h>
 #import <BlocksKit/UIActionSheet+BlocksKit.h>
 
-@interface UIActionSheetBlocksKitTest : SenTestCase
+@interface UIActionSheetBlocksKitTest : XCTestCase
 
 - (void)testInit;
 - (void)testAddButtonWithHandler;
