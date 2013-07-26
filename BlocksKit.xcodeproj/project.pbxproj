@@ -191,6 +191,8 @@
 		A97E4CA413FD638A001BB376 /* MFMessageComposeViewController+BlocksKit.m in Sources */ = {isa = PBXBuildFile; fileRef = A97E4CA213FD638A001BB376 /* MFMessageComposeViewController+BlocksKit.m */; };
 		A99DD88613D3170200F2308F /* NSURLConnection+BlocksKit.h in Headers */ = {isa = PBXBuildFile; fileRef = A99DD88413D316FF00F2308F /* NSURLConnection+BlocksKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		A99DD88913D3170200F2308F /* NSURLConnection+BlocksKit.m in Sources */ = {isa = PBXBuildFile; fileRef = A99DD88513D3170100F2308F /* NSURLConnection+BlocksKit.m */; };
+		C05D8F3F17A061C800632A60 /* UIImagePickerController+BlocksKit.h in Headers */ = {isa = PBXBuildFile; fileRef = C05D8F3D17A061C800632A60 /* UIImagePickerController+BlocksKit.h */; };
+		C05D8F4117A061C800632A60 /* UIImagePickerController+BlocksKit.m in Sources */ = {isa = PBXBuildFile; fileRef = C05D8F3E17A061C800632A60 /* UIImagePickerController+BlocksKit.m */; };
 		DB155FD9176294A2008B9A43 /* ffi_arm.h in Headers */ = {isa = PBXBuildFile; fileRef = DB155FCF176294A2008B9A43 /* ffi_arm.h */; };
 		DB155FDA176294A2008B9A43 /* ffi_common.h in Headers */ = {isa = PBXBuildFile; fileRef = DB155FD0176294A2008B9A43 /* ffi_common.h */; };
 		DB155FDB176294A2008B9A43 /* ffi_i386.h in Headers */ = {isa = PBXBuildFile; fileRef = DB155FD1176294A2008B9A43 /* ffi_i386.h */; };
@@ -589,6 +591,8 @@
 				6C6AAD9F138372E300203261 /* UIView+BlocksKit.m */,
 				6CC56DF71386A48900925FDC /* UIWebView+BlocksKit.h */,
 				6CC56DF81386A48900925FDC /* UIWebView+BlocksKit.m */,
+				C05D8F3D17A061C800632A60 /* UIImagePickerController+BlocksKit.h */,
+				C05D8F3E17A061C800632A60 /* UIImagePickerController+BlocksKit.m */,
 			);
 			path = UIKit;
 			sourceTree = "<group>";

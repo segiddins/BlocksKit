@@ -55,6 +55,7 @@
 #import "UIBarButtonItem+BlocksKit.h"
 #import "UIControl+BlocksKit.h"
 #import "UIGestureRecognizer+BlocksKit.h"
+#import "UIImagePickerController+BlocksKit.h"
 #import "UIPopoverController+BlocksKit.h"
 #import "UIView+BlocksKit.h"
 #import "UIWebView+BlocksKit.h"
